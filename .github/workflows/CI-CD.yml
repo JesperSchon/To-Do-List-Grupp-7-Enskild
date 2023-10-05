@@ -57,4 +57,4 @@ jobs:
       - name: Fake Deploy to Test Environment
         run: |
           IMAGE_TAG=$(echo ${GITHUB_REF##*/} | tr '[:upper:]' '[:lower:]')
-          echo "Deploying image docker.pkg.github.com/JesperSchon/to-do-list-grupp-7-enskild/min-app:$IMAGE_TAG"
+          echo "Deploying image docker.pkg.github.com/JesperSchon/To-Do-List-Grupp-7-Enskild/min-app:$IMAGE_TAG"
