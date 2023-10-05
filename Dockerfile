@@ -1,12 +1,12 @@
-# Använd en officiell Java-basbild
-FROM openjdk:17-jdk
+# Använd en basbild med Java 18
+FROM openjdk:18-jdk
 
-# Ange arbetsmapp i containern
+# Ange arbetskatalogen inuti containern
 WORKDIR /app
 
-# Kopiera .jar-filen från din byggmapp till containern
-COPY demo/build/libs/demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
+# Kopiera hela demo-mappen till containern
+COPY . .
 
 # Sätt kommandot för att köra din Java-applikation
-ENTRYPOINT ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app/demo/build/libs/demo-0.0.1-SNAPSHOT.jar"]
 
