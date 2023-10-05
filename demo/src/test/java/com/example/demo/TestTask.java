@@ -39,5 +39,12 @@ public class TestTask {
     assert(task.getStatus() == true);
   }
 
+  @Test
+  public void testGetDeadlineAgain(){
+    Task task = new Task();
+    task.setDeadline("deadline");
+    assert(task.getDeadline().equals("deadline"));
+  }
+
 
 }
