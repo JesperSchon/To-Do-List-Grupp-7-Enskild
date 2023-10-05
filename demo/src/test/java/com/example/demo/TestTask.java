@@ -39,5 +39,12 @@ public class TestTask {
     assert(task.getStatus() == true);
   }
 
+  @Test
+  public void failedTestGetId(){
+    Task task = new Task();
+    task.setId(1L);
+    assert(task.getId() == 2L);
+  }
+
 
 }
