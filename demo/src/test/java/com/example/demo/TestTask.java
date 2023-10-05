@@ -19,7 +19,7 @@ public class TestTask {
   }
 
   @Test
-  public void testGetDeadline(){
+  public void testGetDeadlineDEAD(){
     Task task = new Task();
     task.setDeadline("deadline");
     assert(task.getDeadline().equals("deadline"));
