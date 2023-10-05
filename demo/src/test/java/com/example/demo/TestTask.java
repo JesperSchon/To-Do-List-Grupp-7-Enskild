@@ -39,5 +39,12 @@ public class TestTask {
     assert(task.getStatus() == true);
   }
 
+  @Test
+  public void testGetStatus2(){
+    Task task = new Task();
+    task.setStatus(false);
+    assert(task.getStatus() == false);
+  }
+
 
 }
